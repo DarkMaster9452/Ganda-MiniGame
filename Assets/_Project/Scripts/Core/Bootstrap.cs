@@ -6,7 +6,7 @@ public static class Bootstrap
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     static void Init()
     {
-        if (Object.FindFirstObjectByType<GameManager>() != null) return;
+        if (Object.FindAnyObjectByType<GameManager>() != null) return;
         new GameObject("GameManager").AddComponent<GameManager>();
     }
 }
